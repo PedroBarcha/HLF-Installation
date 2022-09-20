@@ -1,4 +1,5 @@
 #!/bin/bash
+# Criado por Luciano Ermilivitch
 
 adicionaPath(){
 	# BINFABRICPATH=$(pwd)/fabricSamples/fabric-samples/bin

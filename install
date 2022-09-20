@@ -1,5 +1,5 @@
 #!/bin/bash
-# Agradecimentos a Luciano
+# Criado por Luciano Ermilivitch, adaptado por Pedro Barcha
 
 # Instala - Curl, Go, Docker, Docker-compose, node, npm, git
 # Por fim lista a versao dos pacotes instalados para uma verificacao
