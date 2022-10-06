@@ -37,16 +37,15 @@ preReqs(){
 
 	# Obtendo Docker-compose
 	echo "Obtendo Docker Compose"
-	#sudo apt-get install docker-compose-plugin
 	sudo apt-get install docker-compose -y
+	
+	echo "Permita que o usuário seja adicionado ao grupo docker..."
+	sudo usermod -aG docker ${USER}
 
 	# Obtendo Node
 	echo Obtendo Node...
-	sudo apt-get install nodejs -y
-
-	# Obtendo Npm
-	echo Obtendo NPM...
-	sudo apt-get install npm -y
+	curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+	sudo apt-get install -y nodejs
 
 	# Obtendo git
 	echo Obtendo Git
@@ -100,10 +99,11 @@ adicionaPath(){
 	# PATH="${PATH:+${PATH}:${BINFABRICPATH}}"	
 	echo "export PATH=$(pwd)/fabricSamples/fabric-samples/bin:$PATH" >> ~/.bashrc
 	echo "HLF adicionado ao path do usuário"
+	. ~/.bashrc
 }
 
 preReqs
 obtemFabricSamples
 adicionaPath
 
-echo "Finalizado! Siga o próximo passo do README."
+echo "Finalizado!"
