@@ -7,7 +7,6 @@ Para realizar a instalação:
 ```
 git clone https://github.com/PedroBarcha/HLF-Installation
 cd HLF-Installation
-chmod +x install atribuiPath
+chmod +x install
 ./install
-sudo ./atribuiPath
 ```
